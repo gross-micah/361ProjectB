@@ -1,0 +1,33 @@
+var express = require('express');
+var mysql = require('./dbcon.js');
+var app = express();
+var handlebars = require('express-handlebars').create({defaultLayout:'main'});
+var request = require('request');
+var myParser = require("body-parser");
+var async = require('async');
+app.set('view engine', 'handlebars');
+app.set('port', Number(process.env.PORT || 3000));
+app.use(myParser.json());
+app.use(express.static('public'));
+app.engine('handlebars', handlebars.engine);
+
+app.get("/", function(req, res, next){
+    res.render('home');
+
+});
+
+app.use(function(req,res){
+  res.status(404);
+  res.render('404');
+});
+
+app.use(function(err, req, res, next){
+  console.error(err.stack);
+  res.type('plain/text');
+  res.status(500);
+  res.render('500');
+});
+
+app.listen(app.get('port'), function(){
+  console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
+});
