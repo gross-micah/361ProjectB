@@ -1,13 +1,11 @@
-//NOTE: We need to identify a mysql host that can be accessed by all members in the group. This was the formatting for
-//one student controlling everything, but that won't necesarrily work for this group project. Need to research an alternative
+// This is an Amazon RDS MySQL database that we all have access to.
 
 var mysql = require('mysql');
 var pool = mysql.createPool({
-  connectionLimit   : 10,
-  host              : 'mysql.eecs.oregonstate.edu',
-  user              : 'cs340_grossmmi',
-  password          : '****',
-  database          : 'cs340_grossmmi' 
+  host              : 'group11-db.cef75i7qm1kt.us-west-2.rds.amazonaws.com',
+  user              : 'groupeleven',
+  password          : 'osucs2017',
+  port              : 3306
 });
 
 module.exports.pool = pool;

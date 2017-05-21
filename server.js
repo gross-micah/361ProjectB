@@ -1,19 +1,26 @@
 var express = require('express');
 var mysql = require('./dbcon.js');
 var app = express();
-var handlebars = require('express-handlebars').create({defaultLayout:'main'});
+var handlebars = require('express-handlebars');
 var request = require('request');
 var myParser = require("body-parser");
 var async = require('async');
-app.set('view engine', 'handlebars');
+
 app.set('port', Number(process.env.PORT || 3000));
 app.use(myParser.json());
 app.use(express.static('public'));
-app.engine('handlebars', handlebars.engine);
+
+app.engine('handlebars', handlebars( {
+  extname: 'handlebars',
+  defaultLayout: 'main',
+  layoutsDir: __dirname + '/views/layouts',
+  partialsDir: __dirname + '/views/partials'
+}));
+
+app.set('view engine', 'handlebars');
 
 app.get("/", function(req, res, next){
     res.render('home');
-
 });
 
 app.use(function(req,res){
