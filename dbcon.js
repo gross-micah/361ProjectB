@@ -1,4 +1,4 @@
-// This is an Amazon RDS MySQL database that we all have access to.
+// This is an Amazon RDS MySQL database that we all have access to.c
 
 var mysql = require('mysql');
 var pool = mysql.createPool({
