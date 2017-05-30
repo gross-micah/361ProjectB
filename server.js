@@ -25,6 +25,10 @@ app.get("/", function(req, res, next){
     res.render('home');
 });
 
+app.get("/search", function(req, res, next) {
+  res.render("search");
+});
+
 app.use(function(req,res){
   res.status(404);
   res.render('404');
