@@ -28,6 +28,9 @@ npm install body-parser
 
 npm install forever
 
+//for unit testing
+npm install mocha 
+
 
 #### Start the node server
 node server.js <port_number>
