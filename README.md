@@ -26,6 +26,8 @@ npm install express-session
 
 npm install body-parser
 
+npm install request
+
 npm install forever
 
 //for unit testing
