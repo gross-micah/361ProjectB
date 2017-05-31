@@ -7,7 +7,7 @@ var myParser = require("body-parser");
 var serveStatic = require("serve-static");
 var async = require('async');
 
-app.set('port', Number(process.env.PORT || 3000));
+app.set('port', process.argv[2]);
 app.use(myParser.json());
 app.use(express.static('public'));
 app.use(serveStatic('public'));
