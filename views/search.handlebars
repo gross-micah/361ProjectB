@@ -1,42 +1,36 @@
-//view for search
- <p>Your search returned 3 results:</p>
- 
- <table style = "width: 50%">
-  <tr>
-    <th>Number</th>
-	<th>Source</th>
-    <th>Image or Video</th>
-    <th>Metadata</th>
-	<th>Location</th>
-	<th>Date/time of capture</th>
-	<th>Link</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
-	<td>Smith</td>
-	<td>Smith</td>
-	<td>Smith</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-	<td>Smith</td>
-	<td>Smith</td>
-	<td>Smith</td>
-  </tr>
-    <tr>
-	<td>3</td>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-	<td>Smith</td>
-	<td>Smith</td>
-	<td>Smith</td>
-  </tr>
-
-</table> 
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="/images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/search">Report Missing Person</a>
+                    </li>
+                    <li>
+                        <a href="#">For Law Enforcment</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    {{> imageupload }}
+    
+    {{> searchresults }}
