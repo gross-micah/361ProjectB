@@ -1,8 +1,7 @@
-<br>
-<div class = "upload" style="margin-left: 350px;">
-<form action="http://httpbin.org/post" method="post" enctype="multipart/form-data">
-Select image to upload:
-<input type="file" name="fileToUpload" id="fileToUpload">
-<input type="submit" value="Upload Image" name="submit">
+<div class ="upload" style="margin-left: 350px;">
+<form action="/upload" method="post" enctype="multipart/form-data">  
+  <label for="file">Select your image:</label>
+  <input type="file" name="userimage" id="file"/>
+  <button type="submit">Upload</button>
 </form>
 </div>
