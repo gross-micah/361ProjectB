@@ -14,6 +14,7 @@ var upload = multer({ storage: storage }).single('userimage');
 module.exports.upload = function (req, res, next) {
   upload(req, res, function (err) {
     if (err) return next(err);
-    
+    res.locals.filename = req.file.originalname;
+    next();
   });
 }
