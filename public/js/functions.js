@@ -7,18 +7,18 @@
 //   req.open("GET", "/data", true);
 //   req.addEventListener('load', function(){
 //     if(req.status >= 200 && req.status < 400){
-//       var response = JSON.parse(req.responseText);
-//       var keys = Object.keys(response[0]);
-//       var table = document.createElement("table");
-//       table.setAttribute("id", "myTable");
-//       var tablebody = document.createElement("tbody");
-//       tablebody.setAttribute("id", "tbody");
+//        var response = JSON.parse(req.responseText);
+//        var keys = Object.keys(response[0]);
+//        var table = document.createElement("table");
+//        table.setAttribute("id", "myTable");
+//        var tablebody = document.createElement("tbody");
+//        tablebody.setAttribute("id", "tbody");
 //       //create table header
-//       var header = table.createTHead();
-//       header.setAttribute("id", "TH");
-//       table.appendChild(header);
-//       var row = header.insertRow(0);
-//       for (var i = 0; i < keys.length; i++){
+//        var header = table.createTHead();
+//        header.setAttribute("id", "TH");
+//        table.appendChild(header);
+//        var row = header.insertRow(0);
+//        for (var i = 0; i < keys.length; i++){
 //         var cell = document.createElement("td");
 //         var cellText = document.createTextNode('' + keys[i]);
 //         cell.appendChild(cellText);
