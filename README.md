@@ -16,23 +16,24 @@ cp dbcon.js
 
 
 #### 4) Import node modules using these commands:
-npm install express
+  npm install express
 
-npm install express-handlebars
+  npm install express-handlebars
 
-npm install mysql
+  npm install mysql
 
-npm install express-session
+  npm install express-session
 
-npm install body-parser
+  npm install body-parser
 
-npm install request
+  npm install request
 
-npm install forever
+  npm install forever
+  
 
-//for unit testing
+  //for unit testing
 
-npm install mocha 
+  npm install mocha 
 
 
 ####  5)Start the node server
