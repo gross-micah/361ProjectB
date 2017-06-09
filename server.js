@@ -43,10 +43,11 @@ app.post("/upload", uploader.upload, function(req, res, next) {
   // Called inside function so that res is defined, which is needed
   // for res.locals.filename
   faceDetection.detectFaces(res.locals.filename, function() {
-    // Callback does nothing
+    // console.log to show that it was called
+    console.log(res.locals.filename);
     console.log('called faceDetection');
   });
-  next();
+ res.render()
   // Need to set up response so doesn't end in 404
 });
 

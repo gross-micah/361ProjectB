@@ -6,7 +6,7 @@ chai.use(chaiHttp);
 
 describe('Vist \'/\'', function(){
     it('respond with html', function(done){
-        // Will have to change once on server. Maybe environment variable? 
+        // Will have to change once on server
         chai.request('http://localhost:8080')
             .get('/')
             .end(function(err, res) {

@@ -1,7 +1,12 @@
 // Using Google API here
 
 var Vision = require('@google-cloud/vision');
-var vision = Vision();
+
+var projectID = process.env.PROJECT_ID;
+var vision = Vision({
+  projectId: projectID
+});
+
 var fs = require('fs');
 
 var self = module.exports = {
