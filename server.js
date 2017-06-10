@@ -37,6 +37,10 @@ app.get("/search", function(req, res, next) {
   res.render("search");
 });
 
+app.get("/searchresultstable", function(req, res, next) {
+  res.render("searchresultstable");
+});
+
 // Will upload to 'uploads' folder (uploader.js)
 // then call detectFaces (facedetection.js)
 app.post("/upload", uploader.upload, function(req, res, next) {
