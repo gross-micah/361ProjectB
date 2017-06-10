@@ -29,11 +29,21 @@ cp dbcon.js
   npm install request
 
   npm install forever
-  
+
+  //installs related to facial recognition
+  npm install async
+
+  npm install serve-static
+
+  npm install multer
+
+  npm install @google-cloud/vision
+
+  npm install watson-developer-cloud
 
   //for unit testing
 
-  npm install mocha 
+  npm install mocha
 
 
 ####  5)Start the node server
